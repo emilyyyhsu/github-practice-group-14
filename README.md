@@ -138,6 +138,9 @@ Add your name and favorite Bay Area sports team below. Each person should add ON
 
 - Ana Arante - Favorite Team: San Francisco 49ers
 
+- Suphia Sidiqi - Favorite Team: San Jose Earthquakes
+
+
 ---
 
 ## Bay Area Sports Teams Reference 🏆

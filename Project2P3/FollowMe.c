@@ -18,6 +18,8 @@
 #define TOO_CLOSE 	(0)  // replace the zero with the ADC output value for minimum distance
 
 void follow_me(void);
+uint16_t median(uint16_t u1, uint16_t u2, uint16_t u3);
+uint16_t ReadADCMedianFilter(void);
 
 int main(void){	
 	PLL_Init();									// 16MHz system clock
@@ -58,4 +60,16 @@ void follow_me(void) {
 			stop_the_car();
 		}
   }	
+}
+
+uint16_t ReadADCMedianFilter(void){
+  static uint16_t oldest=0, middle=0;	
+  uint16_t newest;
+	uint16_t NewValue;
+	
+  newest = ADC0_InSeq3();  // read one value
+  NewValue = median(newest, middle, oldest);
+  oldest = middle; 
+  middle = newest; 
+	return NewValue;
 }

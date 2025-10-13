@@ -42,19 +42,19 @@ volatile uint16_t ADCvalue;
 // 2.25V    3072
 // 3.00V    4095
 
-int main(void){	
-  PLL_Init();                         // 16 MHz, 
-	PORTF_Init();
-//  ADC0_InitSWTriggerSeq3_Ch1();     // ADC initialization PE2/AIN1
-	ADC0_InitSWTriggerSeq3_Ch7();       // ADC initialization PD0/AIN7
-	
-  while(1){
-    GPIO_PORTF_DATA_R |= 0x04;          // profile
-    ADCvalue = ReadADCMedianFilter();
-		Delay();
-    GPIO_PORTF_DATA_R &= ~0x04;
-  }
-}
+//int main(void){	
+//  PLL_Init();                         // 16 MHz, 
+//	PORTF_Init();
+////  ADC0_InitSWTriggerSeq3_Ch1();     // ADC initialization PE2/AIN1
+//	ADC0_InitSWTriggerSeq3_Ch7();       // ADC initialization PD0/AIN7
+//	
+//  while(1){
+//    GPIO_PORTF_DATA_R |= 0x04;          // profile
+//    ADCvalue = ReadADCMedianFilter();
+//		Delay();
+//    GPIO_PORTF_DATA_R &= ~0x04;
+//  }
+//}
 
 void PORTF_Init(void){
   SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R5; // activate port F

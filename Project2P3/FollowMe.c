@@ -7,9 +7,10 @@
 
 // This is an example program to show how to use hardware PWM on TM4C123.
 #include <stdint.h>
-#include "Motors.h"
+#include "GPIO.h"
 #include "ADC0SS3.h"
 #include "PLL.h"
+#include "FollowMe.h"
 
 // move the following constant definitions to ADC0SS3.h
 #define TOO_FAR 		(0)  // replace the zero with the ADC output value for maximum distance
@@ -21,7 +22,7 @@ void follow_me(void);
 int main(void){	
 	PLL_Init();									// 16MHz system clock
 	ADC0_Seq3_Ch9_Init();       // ADC initialization PE4/AIN9
-	Motors_Init();              // initialize PB32: left direction pins, PB76: right direction pins
+	Car_Dir_Init();				// initialize PB32: left direction pins, PB76: right direction pins
 															// PB4:Left wheel, PB5:Right wheel
 	while(1){
 	  stop_the_car();

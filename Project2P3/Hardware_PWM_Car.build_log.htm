@@ -5,7 +5,7 @@
 <h2>Tool Versions:</h2>
 IDE-Version: µVision V5.43.0.0
 Copyright (C) 2025 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: H anajolynnarante@gmail.com, Y, LIC=----
+License Information: Emily Hsu, Cal State Long Beach, LIC=----
  
 Tool Versions:
 Toolchain:       MDK-Lite  Version: 5.43.0.0
@@ -21,61 +21,26 @@ Target DLL:      UL2CM3.DLL V1.164.16.0
 Dialog DLL:      TCM.DLL V1.56.6.0
  
 <h2>Project:</h2>
-C:\Users\anajo\OneDrive\Desktop\WS_347\Project2P3\github-practice-group-14\Project2P3\Project2P3.uvprojx
+C:\CECS347_Fall2025\CECS 347\github-practice-group-14\Project2P3\Project2P3.uvprojx
 Project File Date:  10/13/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.24', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'HW_PWM_Car'
-assembling startup.s...
-FollowMe.c(13): warning: In file included from...
-.\FollowMe.h(9): error: use of undeclared identifier 'PWM0_ENABLE_R'
-    9 |                 PWM0_ENABLE_R &= ~0x0000000C; // stop both wheels
-      |                 ^
-.\FollowMe.h(10): error: call to undeclared function 'Timer1A_Delay'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
-   10 |                 Timer1A_Delay(ONE_SEC);
-      |                 ^
-.\FollowMe.h(10): error: use of undeclared identifier 'ONE_SEC'
-   10 |                 Timer1A_Delay(ONE_SEC);
-      |                               ^
-.\FollowMe.h(15): error: use of undeclared identifier 'PWM0_ENABLE_R'
-   15 |                 PWM0_ENABLE_R |= 0x0000000C; // enable both wheels
-      |                 ^
-.\FollowMe.h(16): error: call to undeclared function 'Timer1A_Delay'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
-   16 |                 Timer1A_Delay(ONE_SEC);
-      |                 ^
-.\FollowMe.h(16): error: use of undeclared identifier 'ONE_SEC'
-   16 |                 Timer1A_Delay(ONE_SEC);
-      |                               ^
-.\FollowMe.h(21): error: use of undeclared identifier 'PWM0_ENABLE_R'
-   21 |                 PWM0_ENABLE_R |= 0x0000000C; // enable both wheels
-      |                 ^
-.\FollowMe.h(22): error: call to undeclared function 'Timer1A_Delay'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
-   22 |                 Timer1A_Delay(ONE_SEC);
-      |                 ^
-.\FollowMe.h(22): error: use of undeclared identifier 'ONE_SEC'
-   22 |                 Timer1A_Delay(ONE_SEC);
-      |                               ^
-FollowMe.c(24): error: call to undeclared function 'ADC0_Seq3_Ch9_Init'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
-   24 |         ADC0_Seq3_Ch9_Init();       // ADC initialization PE4/AIN9
-      |         ^
-FollowMe.c(40): error: call to undeclared function 'ReadADCMedianFilter'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
-   40 |     ADCvalue = ReadADCMedianFilter();  // read one value
-      |                ^
-FollowMe.c(45): error: call to undeclared function 'ReadADCMedianFilter'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
-   45 |                         ADCvalue = ReadADCMedianFilter();  // read one value
-      |                                    ^
-FollowMe.c(49): error: call to undeclared function 'ReadADCMedianFilter'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
-   49 |                 ADCvalue = ReadADCMedianFilter();
-      |                            ^
-13 errors generated.
-compiling FollowMe.c...
-compiling PWM.c...
 compiling ADC0SS3.c...
-compiling Timer1A.c...
 compiling GPIO.c...
-compiling HW_PWM_Car.c...
-".\Hardware_PWM_Car.axf" - 13 Error(s), 0 Warning(s).
+compiling ADCFilterTestMain.c...
+compiling PWM.c...
+compiling Timer1A.c...
+compiling FollowMe.c...
+assembling startup.s...
+linking...
+.\Hardware_PWM_Car.axf: Error: L6200E: Symbol main multiply defined (by adcfiltertestmain.o and followme.o).
+.\Hardware_PWM_Car.axf: Error: L6200E: Symbol __ARM_use_no_argv multiply defined (by adcfiltertestmain.o and followme.o).
+Not enough information to list image symbols.
+Not enough information to list load addresses in the image map.
+Finished: 2 information, 0 warning and 2 error messages.
+".\Hardware_PWM_Car.axf" - 2 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -92,14 +57,14 @@ Package Vendor: Keil
 
 <h2>Collection of Component include folders:</h2>
   ./RTE/_HW_PWM_Car
-  C:/Arm/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include
-  C:/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123
+  C:/Arm Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include
+  C:/Arm Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123
 
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE@6.1.1
 Target not created.
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:00
 </pre>
 </body>
 </html>

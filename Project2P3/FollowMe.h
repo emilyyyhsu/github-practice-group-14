@@ -3,7 +3,12 @@
 // Assignment: Example project for Hardware PWM controlled Car
 // Description: 
 /////////////////////////////////////////////////////////////////////////////
+#include <stdint.h>
+#include "tm4c123gh6pm.h"
 
+#define ONE_SEC 64000
+ 
+void Timer1A_Delay(unsigned long period);
 
 void stop_the_car(void){
 		WHEEL_DIR = STOP;

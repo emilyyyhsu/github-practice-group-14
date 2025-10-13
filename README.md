@@ -140,6 +140,8 @@ Add your name and favorite Bay Area sports team below. Each person should add ON
 
 - Suphia Sidiqi - Favorite Team: San Jose Earthquakes
 
+- Hanna Estrada - Favorite Team: Golden State Warriors
+
 
 ---
 

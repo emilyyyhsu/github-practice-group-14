@@ -1,10 +1,9 @@
-#include "tm4c123gh6pm.h"
-#include "PWM.h"
-#include <stdint.h>
+/////////////////////////////////////////////////////////////////////////////
+// Course Number: CECS 347
+// Assignment: Example project for Hardware PWM controlled Car
+// Description: 
+/////////////////////////////////////////////////////////////////////////////
 
-#define ONE_SEC 64000
-
-void Timer1A_Delay(unsigned long period);
 
 void stop_the_car(void){
 		WHEEL_DIR = STOP;

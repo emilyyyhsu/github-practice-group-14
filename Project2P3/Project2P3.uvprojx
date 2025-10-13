@@ -420,6 +420,11 @@
               <FileType>1</FileType>
               <FilePath>.\FollowMe.c</FilePath>
             </File>
+            <File>
+              <FileName>FollowMe.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\FollowMe.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

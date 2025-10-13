@@ -136,6 +136,13 @@ Add your name and favorite Bay Area sports team below. Each person should add ON
 
 - Emily Hsu - Favorite Team: San Jose Sharks
 
+- Ana Arante - Favorite Team: San Francisco 49ers
+
+- Suphia Sidiqi - Favorite Team: San Jose Earthquakes
+
+- Hanna Estrada - Favorite Team: Golden State Warriors
+
+
 ---
 
 ## Bay Area Sports Teams Reference 🏆

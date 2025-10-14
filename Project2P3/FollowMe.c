@@ -18,10 +18,11 @@
 #define TOO_CLOSE 	(0)  // replace the zero with the ADC output value for minimum distance
 
 void follow_me(void);
+uint16_t ReadADCMedianFilter(void);
 
 int main(void){	
 	PLL_Init();									// 16MHz system clock
-	ADC0_Seq3_Ch9_Init();       // ADC initialization PE4/AIN9
+	ADC0_InitSWTriggerSeq3_Ch7();       // ADC initialization PE4/AIN9
 	Car_Dir_Init();				// initialize PB32: left direction pins, PB76: right direction pins
 															// PB4:Left wheel, PB5:Right wheel
 	while(1){

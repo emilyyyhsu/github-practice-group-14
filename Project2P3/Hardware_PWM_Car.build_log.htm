@@ -27,34 +27,29 @@ Project File Date:  10/13/2025
 <h2>Output:</h2>
 *** Using Compiler 'V6.24', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'HW_PWM_Car'
-assembling startup.s...
+compiling GPIO.c...
+compiling ADC0SS3.c...
+compiling HW_PWM_Car.c...
+compiling Timer1A.c...
+compiling PWM.c...
 FollowMe.c(13): warning: In file included from...
-.\FollowMe.h(9): error: use of undeclared identifier 'PWM0_ENABLE_R'
-    9 |                 PWM0_ENABLE_R &= ~0x0000000C; // stop both wheels
+.\FollowMe.h(12): error: call to undeclared function 'Timer1A_Delay'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   12 |                 Timer1A_Delay(ONE_SEC);
       |                 ^
-.\FollowMe.h(10): error: call to undeclared function 'Timer1A_Delay'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
-   10 |                 Timer1A_Delay(ONE_SEC);
-      |                 ^
-.\FollowMe.h(10): error: use of undeclared identifier 'ONE_SEC'
-   10 |                 Timer1A_Delay(ONE_SEC);
+.\FollowMe.h(12): error: use of undeclared identifier 'ONE_SEC'
+   12 |                 Timer1A_Delay(ONE_SEC);
       |                               ^
-.\FollowMe.h(15): error: use of undeclared identifier 'PWM0_ENABLE_R'
-   15 |                 PWM0_ENABLE_R |= 0x0000000C; // enable both wheels
+.\FollowMe.h(18): error: call to undeclared function 'Timer1A_Delay'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   18 |                 Timer1A_Delay(ONE_SEC);
       |                 ^
-.\FollowMe.h(16): error: call to undeclared function 'Timer1A_Delay'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
-   16 |                 Timer1A_Delay(ONE_SEC);
-      |                 ^
-.\FollowMe.h(16): error: use of undeclared identifier 'ONE_SEC'
-   16 |                 Timer1A_Delay(ONE_SEC);
+.\FollowMe.h(18): error: use of undeclared identifier 'ONE_SEC'
+   18 |                 Timer1A_Delay(ONE_SEC);
       |                               ^
-.\FollowMe.h(21): error: use of undeclared identifier 'PWM0_ENABLE_R'
-   21 |                 PWM0_ENABLE_R |= 0x0000000C; // enable both wheels
+.\FollowMe.h(24): error: call to undeclared function 'Timer1A_Delay'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   24 |                 Timer1A_Delay(ONE_SEC);
       |                 ^
-.\FollowMe.h(22): error: call to undeclared function 'Timer1A_Delay'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
-   22 |                 Timer1A_Delay(ONE_SEC);
-      |                 ^
-.\FollowMe.h(22): error: use of undeclared identifier 'ONE_SEC'
-   22 |                 Timer1A_Delay(ONE_SEC);
+.\FollowMe.h(24): error: use of undeclared identifier 'ONE_SEC'
+   24 |                 Timer1A_Delay(ONE_SEC);
       |                               ^
 FollowMe.c(24): error: call to undeclared function 'ADC0_Seq3_Ch9_Init'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
    24 |         ADC0_Seq3_Ch9_Init();       // ADC initialization PE4/AIN9
@@ -68,14 +63,11 @@ FollowMe.c(45): error: call to undeclared function 'ReadADCMedianFilter'; ISO C9
 FollowMe.c(49): error: call to undeclared function 'ReadADCMedianFilter'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
    49 |                 ADCvalue = ReadADCMedianFilter();
       |                            ^
-13 errors generated.
+10 errors generated.
 compiling FollowMe.c...
-compiling PWM.c...
-compiling ADC0SS3.c...
-compiling Timer1A.c...
-compiling GPIO.c...
-compiling HW_PWM_Car.c...
-".\Hardware_PWM_Car.axf" - 13 Error(s), 0 Warning(s).
+assembling startup.s...
+compiling ADCFilterTestMain.c...
+".\Hardware_PWM_Car.axf" - 10 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 

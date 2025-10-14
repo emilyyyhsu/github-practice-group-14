@@ -51,6 +51,11 @@ int main(void){
   while(1){
     GPIO_PORTF_DATA_R |= 0x04;          // profile
     ADCvalue = ReadADCMedianFilter();
+		if (ADCvalue >= 400){
+			ADCvalue -= 400;		// offset when distance is 70cm
+		} else{
+			ADCvalue = 0;
+		}
 		Delay();
     GPIO_PORTF_DATA_R &= ~0x04;
   }
@@ -81,7 +86,7 @@ uint16_t result;
     if(u3>u2)   result=u2;     // u2>u1,u3>u2       u3>u2>u1
       else
         if(u1>u3) result=u1;   // u2>u1,u2>u3,u1>u3 u2>u1>u3
-        else      result=u3;   // u2>u1,u2>u3,u3>u1 u2>u3>u1
+        else      result=u3 ;   // u2>u1,u2>u3,u3>u1 u2>u3>u1
   return(result);
 }
 

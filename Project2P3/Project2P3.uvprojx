@@ -425,6 +425,11 @@
               <FileType>5</FileType>
               <FilePath>.\FollowMe.h</FilePath>
             </File>
+            <File>
+              <FileName>ADCFilterTestMain.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ADCFilterTestMain.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

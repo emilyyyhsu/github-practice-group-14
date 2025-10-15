@@ -13,10 +13,12 @@
 #include "FollowMe.h"
 
 // move the following constant definitions to ADC0SS3.h
-#define TOO_FAR 		(0)  // replace the zero with the ADC output value for maximum distance
-#define FOLLOW_DIST (0)  // replace the zero with the ADC output value for object following distance
-#define TOO_CLOSE 	(0)  // replace the zero with the ADC output value for minimum distance
-
+#define TOO_FAR 		(1309)  // replace the zero with the ADC output value for maximum distance
+								// setting max distance at 70 cm but values are off by 400 so 909 + 400 = 1309
+#define FOLLOW_DIST (1179) 	 	// replace the zero with the ADC output value for object following distance
+								// use 30 cm  with value 1179 to just test car
+#define TOO_CLOSE 	(2066)  		// replace the zero with the ADC output value for minimum distance
+								// use 15 cm as minimum distance with value 2066
 void follow_me(void);
 uint16_t ReadADCMedianFilter(void);
 

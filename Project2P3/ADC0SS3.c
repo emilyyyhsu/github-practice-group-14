@@ -45,6 +45,8 @@
 // SS2 3rd sample source: AIN8 (PE5)
 // SS2 interrupts: enabled after 3rd sample but not promoted to controller
 void ADC_Init298(void){
+
+  
   volatile unsigned long delay;
 //  SYSCTL_RCGC0_R |= 0x00010000; // 1) activate ADC0 (legacy code)
   SYSCTL_RCGCADC_R |= 0x00000001; // 1) activate ADC0

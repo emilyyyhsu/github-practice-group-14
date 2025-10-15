@@ -5,6 +5,7 @@
 // September 8, 2025
 
 #include "tm4c123gh6pm.h"
+#include "PLL.h"
 #include <stdint.h>
 
 // ***************** Timer1_Init ****************

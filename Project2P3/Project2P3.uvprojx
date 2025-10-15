@@ -401,11 +401,6 @@
               <FilePath>.\PWM.c</FilePath>
             </File>
             <File>
-              <FileName>HW_PWM_Car.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\HW_PWM_Car.c</FilePath>
-            </File>
-            <File>
               <FileName>Timer1A.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Timer1A.c</FilePath>
@@ -429,6 +424,16 @@
               <FileName>ADCFilterTestMain.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\ADCFilterTestMain.c</FilePath>
+            </File>
+            <File>
+              <FileName>PLL.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\PLL.c</FilePath>
+            </File>
+            <File>
+              <FileName>PLL.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\PLL.h</FilePath>
             </File>
           </Files>
         </Group>

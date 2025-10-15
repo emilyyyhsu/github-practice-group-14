@@ -28,11 +28,8 @@
 #include "PLL.h"
 #include <stdint.h>
 
-void PORTF_Init(void);
 uint16_t median(uint16_t u1, uint16_t u2, uint16_t u3);
 uint16_t ReadADCMedianFilter(void);
-void Delay(void);
-
 volatile uint16_t ADCvalue;
 // The digital number ADCvalue is a representation of the voltage on PE2 
 // voltage  ADCvalue
@@ -42,35 +39,6 @@ volatile uint16_t ADCvalue;
 // 2.25V    3072
 // 3.00V    4095
 
-int main(void){	
-  PLL_Init();                         // 16 MHz, 
-	PORTF_Init();
-//  ADC0_InitSWTriggerSeq3_Ch1();     // ADC initialization PE2/AIN1
-	ADC0_InitSWTriggerSeq3_Ch7();       // ADC initialization PD0/AIN7
-	
-  while(1){
-    GPIO_PORTF_DATA_R |= 0x04;          // profile
-    ADCvalue = ReadADCMedianFilter();
-		if (ADCvalue >= 400){
-			ADCvalue -= 400;		// offset when distance is 70cm
-		} else{
-			ADCvalue = 0;
-		}
-		Delay();
-    GPIO_PORTF_DATA_R &= ~0x04;
-  }
-}
-
-void PORTF_Init(void){
-  SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R5; // activate port F
-	while ((SYSCTL_RCGCGPIO_R&SYSCTL_RCGCGPIO_R5)!=SYSCTL_RCGCGPIO_R5){}
-		
-  GPIO_PORTF_DIR_R |= 0x04;             // make PF2 out (built-in LED)
-  GPIO_PORTF_AFSEL_R &= ~0x04;          // disable alt funct on PF2
-  GPIO_PORTF_DEN_R |= 0x04;             // enable digital I/O on PF2
-  GPIO_PORTF_PCTL_R &= ~0x00000F00;     // configure PF2 to be GPIO
-  GPIO_PORTF_AMSEL_R &= ~ 0x04;               // disable analog functionality on PF
-}
 
 // Median function: 
 // A helper function for ReadADCMedianFilter()
@@ -106,10 +74,4 @@ uint16_t ReadADCMedianFilter(void){
   oldest = middle; 
   middle = newest; 
 	return NewValue;
-}
-
-void Delay(void) {
-	uint32_t delay;
-	
-  for(delay=0; delay<100000; delay++){};
 }

@@ -4,6 +4,10 @@
 // Description: 
 /////////////////////////////////////////////////////////////////////////////
 
+void Timer1A_Delay(unsigned long period);
+
+#define ONE_SEC		64000
+
 #include "tm4c123gh6pm.h"
 
 void stop_the_car(void){

@@ -6,6 +6,7 @@
 // March 12, 2024
 
 // This is an example program to show how to use hardware PWM on TM4C123.
+#include "tm4c123gh6pm.h"
 #include <stdint.h>
 #include "GPIO.h"
 #include "ADC0SS3.h"

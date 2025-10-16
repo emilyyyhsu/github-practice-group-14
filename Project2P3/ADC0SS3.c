@@ -59,7 +59,7 @@
 // SS3 1st sample source: Ain7 (PD0)
 // SS3 interrupts: flag set on completion but no interrupt requested
 // When the PLL is operating, the ADC clock is derived from the PLL(400)   25 by default.
-void ADC0_InitSWTriggerSeq3_Ch9(void){ 
+void ADC0_InitSWTriggerSeq3_Ch9(void){ // yuh
   SYSCTL_RCGCGPIO_R |= 0x10;   // 1) activate clock for Port E
 	while ((SYSCTL_RCGCGPIO_R&0x10) == 0){}
 
